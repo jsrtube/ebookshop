@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>QR Generator</title>
+
+  <script type="text/javascript" src="qrcreate/qr-code-styling.js"></script>
+
+  <link href="qrcreate/css2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<header id="header" align="center"><h1>Qr Code Generator</h1></header><br>
+
+
+<div class="container">
+    <div class="row">
+	    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+		   <div>
+
+    <form id="qrForm" onsubmit="return false;">
+
+      <div class="inputContainer">
+
+        <label for="dataInput">Enter Text</label> 
+        <input class="form-control" type="text" onchange="updateQrData();" name="dataInput" id="dataInput" placeholder="Enter text" required />
+
+        
+      </div>
+
+      <div class="inputContainer">
+
+        <label for="imageInput">Image</label>
+
+        <input class="form-control" type="file" onchange="updateQrImg();" name="imageInput" id="imageInput" accept="image/*"  />
+
+      </div>
+
+      <div class="inputContainer">
+
+        <label for="colorInput">Color</label>
+
+        <input type="color" class="form-control" onchange="updateQrColor();" name="colorInput" id="colorInput" />
+
+      </div>
+
+      <div class="inputContainer">
+
+        <label for="typeInput">Type</label>
+
+        <select class="form-control" name="typeInput" id="typeInput" onchange="updateQrType();">
+
+          <option value="square">Square</option>
+
+          <option value="rounded">Rounded</option>
+
+          <option value="dots">Dots</option>
+
+        </select>
+
+      </div>
+
+    </form>
+    <br>
+    <button id="formButton" class="form-control btn-success" onclick="download();">Download</button>
+
+  </div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"><br>
+		  <div id="canvas" align="center"></div>
+		 
+		</div>
+    </div>
+  </div>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="qrcreate/qr.js"></script>
+
+</body>
+
+</html>
