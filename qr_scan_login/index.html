@@ -6,12 +6,13 @@
     <title>Smart Book Reading</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<script src="http://jsrsmartebook.atwebpages.com/qr_scan_login/html5shiv.min.js"></script>
-	<script src="http://jsrsmartebook.atwebpages.com/qr_scan_login/respond.min.js"></script>
+	<script src="html5shiv.min.js"></script>
+	<script src="respond.min.js"></script>
 	<![endif]-->
-	<script async src="http://jsrsmartebook.atwebpages.com/qr_scan_login/adsbygoogle.js"></script>
+	<script async src="adsbygoogle.js"></script>
 	<script>
 	  (adsbygoogle = window.adsbygoogle || []).push({
 		google_ad_client: "ca-pub-6724419004010752",
@@ -44,32 +45,15 @@
 			
 			<div class="col">
 				<script src="instascan.min.js"></script>
-				<h1 align="center"><a href="">Smart Book Reading System</a></h1>
+				<h1><a href="">Smart Book Reading System</a></h1>
 				<div class="col-sm-12">
 					<video id="preview" class="p-1 border" style="width:100%;"></video>
 				</div>
 				<script type="text/javascript">
 					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
 					scanner.addListener('scan',function(content){
-						alert(content);
-					    
-					   $(document).ready(function(){
-                       $.post("http://jsrsmartebook.atwebpages.com/quizworld/login.php",
-                       {
-                       user: (content)
-                       },
-                       function(data,status){
-                       alert("User Login " + status);
-					   window.location.href= 'http://jsrsmartebook.atwebpages.com/';
-                       });
-                       
-                       });
-					
-						
-						
-						
-						//window.location.href=content;
-						//window.location.href='http://govind.test/name=' + content;
+						//alert(content);
+						window.location.href=content;
 					});
 					Instascan.Camera.getCameras().then(function (cameras){
 						if(cameras.length>0){
@@ -110,7 +94,7 @@
 			
 			
 			<div class="col-sm-3">
-				<script async src="http://jsrsmartebook.atwebpages.com/qr_scan_login/adsbygoogle.js"></script>
+				<script async src="adsbygoogle.js"></script>
 				<!-- demo left sidebar -->
 				
 				<script>
