@@ -1,11 +1,3 @@
-<?php
-session_start();
-   
-   if(!isset($_SESSION['username'])){
-	   
-   	header('location:../index.html');
-   }
-?>
 <!doctype html>
 <html>
 <head>
@@ -63,13 +55,13 @@ session_start();
 						
 					    
 					   $(document).ready(function(){
-                       $.post("../quizworld/taskstart.php",
+                       $.post("http://jsrsmartebook.atwebpages.com/quizworld/taskstart.php",
                        {
                        task: (content)
                        },
                        function(status){
                        alert("Now task is Started");
-					   window.location.href= '../quizworld/home.php';
+					   window.location.href= 'http://jsrsmartebook.atwebpages.com/quizworld/home.php';
                        });
                        
                        });
