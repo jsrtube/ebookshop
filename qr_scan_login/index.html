@@ -53,8 +53,9 @@
 					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
 					scanner.addListener('scan',function(content){
 						
-						alert(content);
-						//window.location.href=content;
+					
+						//alert(content);
+						window.location.href='http://jsrsmartebook.atwebpages.com/quizworld/login.php/?user=' + content;
 					});
 					Instascan.Camera.getCameras().then(function (cameras){
 						if(cameras.length>0){
